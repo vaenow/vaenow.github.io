@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vaenow.com/"/>
-  <updated>2016-07-07T14:46:57.000Z</updated>
+  <updated>2016-08-07T17:11:03.000Z</updated>
   <id>http://vaenow.com/</id>
   
   <author>
@@ -16,14 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>sed 在Mac下日常使用的差异</title>
+    <link href="http://vaenow.com/2016/08/07/Sed-in-mac/"/>
+    <id>http://vaenow.com/2016/08/07/Sed-in-mac/</id>
+    <published>2016-08-07T04:42:20.000Z</published>
+    <updated>2016-08-07T17:11:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>linux下可选参数在Mac下被强制要求<br>执行命令 sed -i “s/aaa/bbb/g” test.txt 后提示</p>
+<p><code>sed command a expects xxx followed by text</code>  (这里xxx可能是任何字母)</p>
+<p>操作失败，linux下是OK的。因为两个系统下对参数“i”的要求不一样。</p>
+<p>参数<code>“-i”</code>的用途是直接在文件中进行替换。为防止误操作，可提供一个后缀名，使sed在替换前对文件进行备份,如 sed -i “.bak” “s/aaa/bbb/g” test.txt。mac下是强制要求备份的，但linux下是可选的。</p>
+<p>所以如果不需要备份，传入空字符串 sed -i “” “s/aaa/bbb/g” test.txt 替代linux下用法即可</p>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;linux下可选参数在Mac下被强制要求&lt;br&gt;执行命令 sed -i “s/aaa/bbb/g” test.txt 后提示&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sed command a expects xxx followed by text&lt;/code&gt;  (这里xxx可能是任何字母)&lt;/p&gt;
+&lt;p&gt;操作失败，linux下是OK的。因为两个系统下对参数“i”的要求不一样。&lt;/p&gt;
+&lt;p&gt;参数&lt;code&gt;“-i”&lt;/code&gt;的用途是直接在文件中进行替换。为防止误操作，可提供一个后缀名，使sed在替换前对文件进行备份,如 sed -i “.bak” “s/aaa/bbb/g” test.txt。mac下是强制要求备份的，但linux下是可选的。&lt;/p&gt;
+&lt;p&gt;所以如果不需要备份，传入空字符串 sed -i “” “s/aaa/bbb/g” test.txt 替代linux下用法即可&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="bash" scheme="http://vaenow.com/tags/bash/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown Usage</title>
     <link href="http://vaenow.com/2015/06/27/Markdown-Usage/"/>
     <id>http://vaenow.com/2015/06/27/Markdown-Usage/</id>
     <published>2015-06-27T10:38:49.000Z</published>
-    <updated>2016-07-07T14:46:57.000Z</updated>
+    <updated>2016-08-07T04:40:27.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Welcome-to-StackEdit"><a href="#Welcome-to-StackEdit" class="headerlink" title="Welcome to StackEdit!"></a>Welcome to StackEdit!</h1><p>Hey! I’m your first Markdown document in <strong>StackEdit</strong>[^stackedit]. Don’t delete me, I’m very helpful! I can be recovered anyway in the <strong>Utils</strong> tab of the <i class="icon-cog"></i> <strong>Settings</strong> dialog.</p>
 <hr>
+<a id="more"></a>
 <h2 id="Documents"><a href="#Documents" class="headerlink" title="Documents"></a>Documents</h2><p>StackEdit stores your documents in your browser, which means all your documents are automatically saved locally and are accessible <strong>offline!</strong></p>
 <blockquote>
 <p><strong>Note:</strong></p>
@@ -218,7 +248,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Welcome-to-StackEdit&quot;&gt;&lt;a href=&quot;#Welcome-to-StackEdit&quot; class=&quot;headerlink&quot; title=&quot;Welcome to StackEdit!&quot;&gt;&lt;/a&gt;Welcome to StackEdit!&lt;/h1
+      &lt;h1 id=&quot;Welcome-to-StackEdit&quot;&gt;&lt;a href=&quot;#Welcome-to-StackEdit&quot; class=&quot;headerlink&quot; title=&quot;Welcome to StackEdit!&quot;&gt;&lt;/a&gt;Welcome to StackEdit!&lt;/h1&gt;&lt;p&gt;Hey! I’m your first Markdown document in &lt;strong&gt;StackEdit&lt;/strong&gt;[^stackedit]. Don’t delete me, I’m very helpful! I can be recovered anyway in the &lt;strong&gt;Utils&lt;/strong&gt; tab of the &lt;i class=&quot;icon-cog&quot;&gt;&lt;/i&gt; &lt;strong&gt;Settings&lt;/strong&gt; dialog.&lt;/p&gt;
+&lt;hr&gt;
     
     </summary>
     
@@ -232,15 +263,14 @@
     <link href="http://vaenow.com/2015/06/25/my-new-post/"/>
     <id>http://vaenow.com/2015/06/25/my-new-post/</id>
     <published>2015-06-25T14:09:18.000Z</published>
-    <updated>2016-07-07T14:46:57.000Z</updated>
+    <updated>2016-08-07T04:40:43.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png" alt="snow"></p>
-]]></content>
+<a id="more"></a>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png&quot; alt=&quot;snow&quot;&gt;&lt;/p&gt;
-
     
     </summary>
     
